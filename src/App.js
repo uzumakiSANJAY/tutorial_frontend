@@ -8,6 +8,8 @@ import './App.css';
 import FaqSection from './components/FaQSection';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
+import OnlineCollegeStudents from './components/OnlineCollegeStudents';
+import OnlineSchoolStudents from './components/OnlineSchoolStudents';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/faq" element={<FaqSection />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/college-students" element={<OnlineCollegeStudents />} />
+          <Route path="/school-students" element={<OnlineSchoolStudents />} />
         </Routes>
         <Footer />
       </div>

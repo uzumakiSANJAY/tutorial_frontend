@@ -22,37 +22,37 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Quick links</h3>
           <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Demo Form</a></li>
-            <li><a href="#">Online Science Tuition for Class 10</a></li>
-            <li><a href="#">Class 10 Maths Tuition</a></li>
-            <li><a href="#">Computer Science Tuition for Class 12</a></li>
-            <li><a href="#">Online Chemistry Tuition for Class 9</a></li>
-            <li><a href="#">Maths Tuition for Class 9</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/book-demo">Demo Form</a></li>
+            <li><a href="/school-students">Online Tuition for Class 1-4</a></li>
+            <li><a href="/school-students">Online Tuition for Class 5-10</a></li>
+            <li><a href="/school-students">Online Tuition for Class 11-12</a></li>
+            <li><a href="/school-students">Online Chemistry Tuition for Class 9</a></li>
+            <li><a href="/school-students">Maths Tuition for Class 9</a></li>
           </ul>
         </div>
 
         <div className="footer-column">
-          <h3>Online tuition by grade</h3>
+          <h3>Online College Students</h3>
           <ul>
-            <li><a href="#">Class 12</a></li>
-            <li><a href="#">Class 11</a></li>
-            <li><a href="#">Class 10</a></li>
-            <li><a href="#">Class 9</a></li>
-            <li><a href="#">Class 8</a></li>
-            <li><a href="#">Class 7</a></li>
-            <li><a href="#">Spoken English for Grade 5</a></li>
+            <li><a href="/college-students">Bengali</a></li>
+            <li><a href="/college-students">English</a></li>
+            <li><a href="/college-students">Mathematics</a></li>
+            <li><a href="/college-students">Sanskrit</a></li>
+            <li><a href="/college-students">Biology</a></li>
+            <li><a href="/college-students">Other Subjects</a></li>
+            <li><a href="/faq">Faqs</a></li>
           </ul>
         </div>
 
         <div className="footer-column">
           <h3>Tuition by boards</h3>
           <ul>
-            <li><a href="#">CBSE Class 12</a></li>
-            <li><a href="#">ICSE Class 10</a></li>
-            <li><a href="#">ISC Class 11</a></li>
-            <li><a href="#">Chemistry Class 10 ICSE</a></li>
-            <li><a href="#">Physics Class 10 ICSE</a></li>
+            <li><a href="/school-students">CBSE Class 12</a></li>
+            <li><a href="/school-students">ICSE Class 10</a></li>
+            <li><a href="/school-students">ISC Class 11</a></li>
+            <li><a href="/school-students">Chemistry Class 10 ICSE</a></li>
+            <li><a href="/school-students">Physics Class 10 ICSE</a></li>
           </ul>
         </div>
 
