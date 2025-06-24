@@ -9,8 +9,8 @@ const Header = () => {
         <img src={logo} alt="Logo" className="logo" />
         <nav className="nav-links">
           <a href="/">Home</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
+          <a href="/blog">Blog</a>
+          <a href="/contact">Contact</a>
           <a href="/faq">FaQ</a>
         </nav>
         <a href="/book-demo" className="header-button">Book Free Demo</a>

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-grid">
 
         <div className="footer-column">
-          <h3>online tuition by cities</h3>
+          <h3>Online tuition by cities</h3>
           <ul>
             <li><a href="#">Online tuition in Kolkata</a></li>
             <li><a href="#">Online tuition in Delhi</a></li>
@@ -15,12 +15,12 @@ const Footer = () => {
             <li><a href="#">Online tuition in Chennai</a></li>
             <li><a href="#">Online tuition in Mumbai</a></li>
           </ul>
-          <h3>contact</h3>
+          <h3>Contact</h3>
           <p>+91-9876543210<br />tutorial4you@gmail.com</p>
         </div>
 
         <div className="footer-column">
-          <h3>quick links</h3>
+          <h3>Quick links</h3>
           <ul>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Demo Form</a></li>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-column">
-          <h3>online tuition by grade</h3>
+          <h3>Online tuition by grade</h3>
           <ul>
             <li><a href="#">Class 12</a></li>
             <li><a href="#">Class 11</a></li>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-column">
-          <h3>tuition by boards</h3>
+          <h3>Tuition by boards</h3>
           <ul>
             <li><a href="#">CBSE Class 12</a></li>
             <li><a href="#">ICSE Class 10</a></li>

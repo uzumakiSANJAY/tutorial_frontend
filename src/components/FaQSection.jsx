@@ -34,7 +34,7 @@ const faqsRight = [
 const FaqSection = () => {
   return (
     <section className="faq-section">
-      <h2 className="faq-title">faqs</h2>
+      <h2 className="faq-title">FaQs</h2>
       <p className="faq-subtitle">Most common questions asked by parents</p>
       <div className="faq-columns">
         <div className="faq-column left">

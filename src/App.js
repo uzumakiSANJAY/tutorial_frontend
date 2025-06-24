@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import ClassForm from './components/ClassForm';
 import './App.css';
 import FaqSection from './components/FaQSection';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/book-demo" element={<ClassForm />} />
           <Route path="/faq" element={<FaqSection />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
