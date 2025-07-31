@@ -16,7 +16,7 @@ const Footer = () => {
             <li><a href="#">Online tuition in Mumbai</a></li>
           </ul>
           <h3>Contact</h3>
-          <p>+91-9876543210<br />tutorial4you@gmail.com</p>
+          <p>+91-9876543210<br />skillcoachtutorial@gmail.com</p>
         </div>
 
         <div className="footer-column">
