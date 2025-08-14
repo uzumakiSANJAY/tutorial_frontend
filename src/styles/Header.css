@@ -43,3 +43,28 @@
 .header-button:hover {
   background-color: #00c2d1;     /* Slightly darker on hover */
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px; /* space between the two buttons */
+}
+
+.header-button {
+  background-color: #00e0ff;
+  color: black;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}

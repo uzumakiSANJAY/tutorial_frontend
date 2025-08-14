@@ -10,6 +10,7 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import OnlineCollegeStudents from './components/OnlineCollegeStudents';
 import OnlineSchoolStudents from './components/OnlineSchoolStudents';
+import TeacherForm from './components/TeacherForm';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/book-demo" element={<ClassForm />} />
+          <Route path="/teacher-register" element={<TeacherForm />} />
           <Route path="/faq" element={<FaqSection />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
