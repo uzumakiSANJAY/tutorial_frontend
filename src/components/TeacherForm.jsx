@@ -20,6 +20,8 @@ const TeacherRegistrationForm = () => {
         idProof: null,
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleChange = (e) => {
         const { name, value, type, files } = e.target;
         setFormData((prev) => ({
@@ -30,6 +32,7 @@ const TeacherRegistrationForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSubmitting(true);
 
         const formDataToSend = new FormData();
         Object.keys(formData).forEach((key) => {
@@ -84,6 +87,8 @@ const TeacherRegistrationForm = () => {
                 title: 'Oops...',
                 text: 'Something went wrong!',
             });
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -93,41 +98,50 @@ const TeacherRegistrationForm = () => {
                 <h2 className="form-title">Teacher Registration Form</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-row">
-                        <input type="text" name="name" placeholder="Full Name" onChange={handleChange} required />
-                        <input type="text" name="mobile" placeholder="Mobile Number" onChange={handleChange} required />
+                        <input type="text" name="name" placeholder="Full Name" onChange={handleChange} required disabled={isSubmitting} />
+                        <input type="text" name="mobile" placeholder="Mobile Number" onChange={handleChange} required disabled={isSubmitting} />
                     </div>
                     <div className="form-row">
-                        <input type="email" name="email" placeholder="Email ID" onChange={handleChange} required />
-                        <input type="text" name="address" placeholder="Where do you stay?" onChange={handleChange} required />
+                        <input type="email" name="email" placeholder="Email ID" onChange={handleChange} required disabled={isSubmitting} />
+                        <input type="text" name="address" placeholder="Where do you stay?" onChange={handleChange} required disabled={isSubmitting} />
                     </div>
                     <div className="form-row">
-                        <input type="text" name="qualification" placeholder="Highest Qualification" onChange={handleChange} required />
-                        <input type="text" name="score" placeholder="Exam Score" onChange={handleChange} required />
+                        <input type="text" name="qualification" placeholder="Highest Qualification" onChange={handleChange} required disabled={isSubmitting} />
+                        <input type="text" name="score" placeholder="Exam Score" onChange={handleChange} required disabled={isSubmitting} />
                     </div>
                     <div className="form-row">
                         <div>
                             <label>Upload Result</label>
-                            <input type="file" name="resultFile" accept="image/*,application/pdf" onChange={handleChange} required />
+                            <input type="file" name="resultFile" accept="image/*,application/pdf" onChange={handleChange} required disabled={isSubmitting} />
                         </div>
-                        <input type="text" name="subject" placeholder="Preferred Subjects" onChange={handleChange} required />
+                        <input type="text" name="subject" placeholder="Preferred Subjects" onChange={handleChange} required disabled={isSubmitting} />
                     </div>
                     <div className="form-row">
-                        <input type="text" name="area" placeholder="Preferred Area" onChange={handleChange} required />
-                        <input type="text" name="classes" placeholder="Preferred Classes" onChange={handleChange} required />
+                        <input type="text" name="area" placeholder="Preferred Area" onChange={handleChange} required disabled={isSubmitting} />
+                        <input type="text" name="classes" placeholder="Preferred Classes" onChange={handleChange} required disabled={isSubmitting} />
                     </div>
                     <div className="form-row">
-                        <input type="text" name="hasLaptop" placeholder="Laptop? (Yes/No)" onChange={handleChange} required />
+                        <input type="text" name="hasLaptop" placeholder="Laptop? (Yes/No)" onChange={handleChange} required disabled={isSubmitting} />
                         <div className="radio-group">
                             <label>Comfortable with demo?</label>
-                            <label><input type="radio" name="giveDemo" value="Yes" onChange={handleChange} /> Yes</label>
-                            <label><input type="radio" name="giveDemo" value="No" onChange={handleChange} /> No</label>
+                            <label><input type="radio" name="giveDemo" value="Yes" onChange={handleChange} disabled={isSubmitting} /> Yes</label>
+                            <label><input type="radio" name="giveDemo" value="No" onChange={handleChange} disabled={isSubmitting} /> No</label>
                         </div>
                     </div>
                     <div className="form-row">
                         <label>Upload ID Proof / Resume</label>
-                        <input type="file" name="idProof" accept="image/*,application/pdf" onChange={handleChange} required />
+                        <input type="file" name="idProof" accept="image/*,application/pdf" onChange={handleChange} required disabled={isSubmitting} />
                     </div>
-                    <button type="submit" className="submit-btn">Submit</button>
+                    <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                        {isSubmitting ? (
+                            <>
+                                <div className="loader"></div>
+                                <span>Submitting...</span>
+                            </>
+                        ) : (
+                            'Submit'
+                        )}
+                    </button>
                 </form>
             </div>
         </div>

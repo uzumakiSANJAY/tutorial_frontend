@@ -66,6 +66,14 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+/* Disabled state styling */
+.form-row input:disabled,
+.form-row input[type="file"]:disabled {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #666;
+  cursor: not-allowed;
+}
+
 label {
   font-size: 14px;
   font-weight: 500;
@@ -93,6 +101,11 @@ label {
   cursor: pointer;
 }
 
+.radio-group input[type="radio"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .submit-btn {
   background-color: #00cfe8;
   color: white;
@@ -107,9 +120,14 @@ label {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   background-color: #00bad1;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 207, 232, 0.3);
@@ -117,6 +135,32 @@ label {
 
 .submit-btn:active {
   transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Loader/Spinner */
+.loader {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive Design */
@@ -152,6 +196,12 @@ label {
   .submit-btn {
     padding: 14px 20px;
     font-size: 15px;
+  }
+  
+  .loader {
+    width: 18px;
+    height: 18px;
+    border-width: 2px;
   }
 }
 
@@ -194,6 +244,12 @@ label {
     padding: 12px 18px;
     font-size: 14px;
   }
+  
+  .loader {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -233,5 +289,11 @@ label {
   .submit-btn {
     padding: 10px 16px;
     font-size: 13px;
+  }
+  
+  .loader {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
   }
 }
