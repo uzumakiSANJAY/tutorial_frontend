@@ -1,65 +1,74 @@
 /* college-subjects.css */
 
 .subjects-page {
-    min-height: 100vh;
-    background: linear-gradient(to bottom right, #0f172a, #1e293b);
-    color: white;
-    padding: 3rem 1rem;
-    font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  color: white;
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .main-heading {
-    font-size: 3rem;
-    font-weight: 700;
-    background: linear-gradient(to right, #34d399, #22d3ee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #34d399, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .subheading {
-    font-size: 1.25rem;
-    color: #cbd5e1;
-    margin-bottom: 3rem;
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .subjects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .subject-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .subject-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
 }
 
 .icon-wrapper {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .bengali { color: #34d399; }
@@ -70,33 +79,208 @@
 .others { color: #a78bfa; }
 
 .subject-card h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
 }
 
 .subject-card p {
-    font-size: 1rem;
-    color: #cbd5e1;
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.5;
 }
 
 .cta-button {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .cta-button button {
-    padding: 1rem 2rem;
-    background: linear-gradient(to right, #10b981, #06b6d4);
-    border: none;
-    border-radius: 999px;
-    font-weight: 600;
-    color: white;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #10b981, #06b6d4);
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 200px;
 }
 
 .cta-button button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .subjects-page {
+    padding: 2.5rem 1rem;
+  }
+  
+  .main-heading {
+    font-size: 2.5rem;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .subjects-page {
+    padding: 2rem 1rem;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .main-heading {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .subheading {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .subject-card {
+    padding: 1.5rem;
+  }
+  
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .subject-card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .subject-card p {
+    font-size: 0.9rem;
+  }
+  
+  .cta-button button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subjects-page {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .main-heading {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .subheading {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .subjects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .subject-card {
+    padding: 1.2rem;
+  }
+  
+  .icon-wrapper {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 0.6rem;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .subject-card h2 {
+    font-size: 1.2rem;
+  }
+  
+  .subject-card p {
+    font-size: 0.85rem;
+  }
+  
+  .cta-button {
+    margin-top: 2rem;
+  }
+  
+  .cta-button button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 360px) {
+  .subjects-page {
+    padding: 1rem 0.5rem;
+  }
+  
+  .main-heading {
+    font-size: 1.6rem;
+  }
+  
+  .subheading {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subject-card {
+    padding: 1rem;
+  }
+  
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .subject-card h2 {
+    font-size: 1.1rem;
+  }
+  
+  .subject-card p {
+    font-size: 0.8rem;
+  }
+  
+  .cta-button button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+    min-width: 140px;
+  }
 }

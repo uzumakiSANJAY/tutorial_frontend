@@ -1,21 +1,25 @@
 .header {
   background-color: #d2c9f5;
-  padding: 15px 30px;
+  padding: 15px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
 }
 
+/* Desktop Navigation */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -26,45 +30,188 @@
   color: #4a4a4a;
   font-size: 18px;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2a2a2a;
 }
 
 .header-button {
-  text-decoration: none;         /* No underline */
-  background-color: #00e6f6;     /* Bright cyan */
-  color: black;                  /* Text color */
-  font-weight: bold;            /* Bold text */
+  text-decoration: none;
+  background-color: #00e6f6;
+  color: black;
+  font-weight: bold;
   padding: 12px 24px;
-  border-radius: 5px;           /* Rounded corners */
-  /*border: 1px solid black;      /* Black border */
+  border-radius: 5px;
   display: inline-block;
   transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
 .header-button:hover {
-  background-color: #00c2d1;     /* Slightly darker on hover */
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
+  background-color: #00c2d1;
 }
 
 .header-buttons {
   display: flex;
-  gap: 10px; /* space between the two buttons */
+  gap: 10px;
 }
 
-.header-button {
-  background-color: #00e0ff;
-  color: black;
-  font-weight: bold;
-  padding: 10px 16px;
-  border-radius: 6px;
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4a4a4a;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Navigation Overlay */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #d2c9f5;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.close-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4a4a4a;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.close-menu-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.mobile-nav-links a {
   text-decoration: none;
+  color: #4a4a4a;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-links a:hover {
+  color: #2a2a2a;
+}
+
+.mobile-header-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.mobile-header-buttons .header-button {
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+  
+  .logo {
+    height: 45px;
+    width: 45px;
+  }
+  
+  .header-button {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 8px 12px;
+  }
+  
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .header-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .mobile-nav-links a {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+  
+  .mobile-header-buttons .header-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Hide/Show elements based on screen size */
+@media (min-width: 769px) {
+  .mobile-hidden {
+    display: block;
+  }
+  
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .desktop-hidden {
+    display: block;
+  }
 }
