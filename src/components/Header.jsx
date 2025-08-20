@@ -20,7 +20,7 @@ const Header = () => {
         <img src={logo} alt="Logo" className="logo" />
         
         {/* Desktop Navigation */}
-        <nav className="nav-links desktop-hidden">
+        <nav className="nav-links">
           <a href="/">Home</a>
           <a href="/blog">Blog</a>
           <a href="/contact">Contact</a>
@@ -28,13 +28,13 @@ const Header = () => {
         </nav>
         
         {/* Desktop Buttons */}
-        <div className="header-buttons desktop-hidden">
+        <div className="header-buttons">
           <a href="/book-demo" className="header-button">Book Free Demo</a>
           <a href="/teacher-register" className="header-button">Teacher Registration</a>
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="mobile-menu-btn mobile-hidden" onClick={toggleMenu}>
+        <button className="mobile-menu-btn" onClick={toggleMenu}>
           <Menu size={24} />
         </button>
       </div>
