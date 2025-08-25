@@ -48,12 +48,12 @@ const Slider = () => {
           </a>
         </div>
 
-        {/* Arrows */}
-        <button className="arrow left" onClick={prevSlide}>
-          &#10094;
+        {/* Simple Arrows */}
+        <button className="slider-arrow slider-arrow-left" onClick={prevSlide}>
+          ‹
         </button>
-        <button className="arrow right" onClick={nextSlide}>
-          &#10095;
+        <button className="slider-arrow slider-arrow-right" onClick={nextSlide}>
+          ›
         </button>
       </div>
     </div>
